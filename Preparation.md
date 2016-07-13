@@ -12,6 +12,10 @@ Open your cmd window (a new one if you have already opened one), enter "java -ve
 
 
 #Second - Install Android Studio
+
+I follow the tutorial here:
+https://developer.android.com/training/basics/firstapp/index.html
+
 ##### Problem 1 - Can't create a normal new project
 I encountered a problem after I turned on the VT-x in BIOS, which is needed to launch a emulator. I can't create a new project and the welcome page I saw is weird and different from all the tutorials. Simply uninstall and reinstall didn't work, so I *manually delete* all Andriod files under User folder and reinstalled. I think I accidently remove some kind of settings or path. 
 
@@ -36,3 +40,7 @@ repositories {
 }
 ```
 (http://stackoverflow.com/questions/32519219/error23-17-failed-to-resolve-junitjunit4-12)
+
+#####Problem 3 - Run the emulator
+
+
