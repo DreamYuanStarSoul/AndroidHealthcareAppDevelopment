@@ -27,15 +27,17 @@ Externalize all the string is definitely a brilliant idea! In case of localizati
 ##Call method by clicking button
 
 ```
-<Button
-    android:onClick="sendMessage"/>
+<Button android:onClick="sendMessage"/>
+
 ...
+
 /** Called when the user clicks the Send button */
     public void sendMessage(View view) {
         // Do something in response to button
     }
 ```
-Requirements:
-1. Be public
-2. Have a void return value
-3. Have a View as the only parameter (this will be the View that was clicked)
+Method requirements:
+
+1. Be public;
+2. Have a void return value;
+3. Have a View as the only parameter (this will be the View that was clicked);
