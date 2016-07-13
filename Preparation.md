@@ -10,4 +10,4 @@ Then we edit the "PATH" variable and add at the end:
 Open your cmd window (a new one if you have already opened one), enter "java -version" and "javac -version" to check whether your setup is successful.
 
 
-Second, we install Andriod Studio. 
+Second, we install Andriod Studio. Installation process is smooth, but I do have a problem later. After I turned on the VT-x in BIOS, which is needed to launch a emulator, I can't create a new project. The welcome page I saw is different from all the tutorials online. Simply uninstall and reinstall didn't work, so I *manually delete* all Andriod files under User folder and reinstalled. I think I accidently remove some kind of settings or path. 
