@@ -72,3 +72,14 @@ The system receives this call and starts an instance of the Activity specified b
 ##Create a secondary activity
 
 Each activity has "onCreate() method", where the activity receives and renders intent. And "setContentView()" is where it performs initial setup of components. 
+
+```
+Intent intent = getIntent();
+String message = intent.getStringExtra(MyActivity.EXTRA_MESSAGE);
+TextView textView = new TextView(this);
+textView.setTextSize(40);
+textView.setText(message);
+RelativeLayout layout = (RelativeLayout) findViewById(R.id.content);
+layout.addView(textView);
+```
+We extract the message and put it into a textView, which we put into the layout. 
