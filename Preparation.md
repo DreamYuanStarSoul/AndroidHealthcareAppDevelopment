@@ -12,4 +12,12 @@ Open your cmd window (a new one if you have already opened one), enter "java -ve
 
 Second, we install Andriod Studio. I encountered a problem after I turned on the VT-x in BIOS, which is needed to launch a emulator. I can't create a new project and the welcome page I saw is weird and different from all the tutorials. Simply uninstall and reinstall didn't work, so I *manually delete* all Andriod files under User folder and reinstalled. I think I accidently remove some kind of settings or path. 
 
-After I created the project, this package "import android.support" and also "junit" have been highlighted with red, indicating it's not properly applied.
+After I created the project, this package "import android.support" and also "junit" have been highlighted with red, indicating it's not properly applied. In build.gradle, we can these lines, my programs are error-free after I comment out the junit line. 
+```
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    //testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+}
+```
