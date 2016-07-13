@@ -22,4 +22,4 @@ id indicates the reference/name of this element, need "+" when we create it. Hin
     <string name="button_send">Send</string>
 </resources>
 ```
-Externalize all the string is definitely a brilliant idea! I should apply this tactic in other complicated programs, too.
+Externalize all the string is definitely a brilliant idea! In case of localization, we only need this single file to do the translation. I should apply this tactic in other complicated programs, too.
