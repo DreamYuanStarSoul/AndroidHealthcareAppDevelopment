@@ -21,10 +21,15 @@ dependencies {
     compile 'com.android.support:design:23.4.0'
 }
 ```
-
-
-This could also be a solution, but it doesn't work in my case.
-
+Two alternatives to solve this issue, but they didn't work in my case, probably because of company proxy.
+#####1
 *Go to File -> Project Structure. Following window will open: remove the junit library (select junit and press "-" button below ) and
 add it again (select "+" button below, select "library dep.", search for "junit", press OK ). Press OK to apply changes. After around 30 seconds your gradle sync should work fine.*
+#####2
+Add this part to "build.gradle":
+```
+repositories {
+    maven { url 'http://repo1.maven.org/maven2' }
+}
+```
 (http://stackoverflow.com/questions/32519219/error23-17-failed-to-resolve-junitjunit4-12)
