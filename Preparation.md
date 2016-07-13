@@ -26,7 +26,9 @@ dependencies {
 }
 ```
 Two alternatives to solve this issue, but they didn't work in my case, probably because of company proxy.
+
 *1. Go to File -> Project Structure. Following window will open: remove the junit library (select junit and press "-" button below ) and add it again (select "+" button below, select "library dep.", search for "junit", press OK ). Press OK to apply changes. After around 30 seconds your gradle sync should work fine.*
+
 *2. Add this part to "build.gradle":*
 ```
 repositories {
