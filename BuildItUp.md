@@ -2,6 +2,7 @@
 
 ##Add a new text field
 ```
+//In xml:
 <EditText android:id="@+id/edit_message"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -15,6 +16,7 @@ id indicates the reference/name of this element, need "+" when we create it. Hin
 
 ##Define strings in res/values/stings
 ```
+//In xml:
 <resources>
     <string name="app_name">MainApp</string>
     <string name="action_settings">Settings</string>
@@ -27,10 +29,10 @@ Externalize all the string is definitely a brilliant idea! In case of localizati
 ##Call method by clicking button
 
 ```
+//In xml:
 <Button android:onClick="sendMessage"/>
 
-...
-
+//In java:
 public void sendMessage(View view) {
     Intent intent = new Intent(this, DisplayMessageActivity.class);  //Explain in the next section
     EditText editText = (EditText) findViewById(R.id.edit_message);
@@ -74,6 +76,7 @@ The system receives this call and starts an instance of the Activity specified b
 Each activity has "onCreate() method", where the activity receives and renders intent. And "setContentView()" is where it performs initial setup of components. 
 
 ```
+//In java - onCreate():
 Intent intent = getIntent();
 String message = intent.getStringExtra(MyActivity.EXTRA_MESSAGE);
 TextView textView = new TextView(this);
