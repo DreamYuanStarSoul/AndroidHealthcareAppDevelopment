@@ -50,5 +50,5 @@ Tools-Android-ADV Manager-Edit-Advance, scroll down and you will see the size op
 ##### 2. Could not get wglGetExtensionsStringARB
 Use Host GPU. Tools-Android-ADV Manager-Edit-Advance, change "auto" to "software".
 
-##### There are some other minor issues, but they didn't prevent me from launching the VM, so, here we go.
+There are some other minor issues, but they didn't prevent me from launching the VM, so, here we go.
 
