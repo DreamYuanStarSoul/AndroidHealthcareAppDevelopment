@@ -51,7 +51,7 @@ Method requirements:
 Intent intent = new Intent(this, DisplayMessageActivity.class);
 ```
 1. A Context, Activity class is a subclass of Context;
-2. The *Class* of the app component which receives the Intent.
+2. The *Class* of the activity which receives the Intent (which the Intent intends to send to).
 
 Find and reach a view:
 ```
@@ -70,3 +70,5 @@ The system receives this call and starts an instance of the Activity specified b
 
 
 ##Create a secondary activity
+
+Each activity has "onCreate() method", where the activity receives and renders intent. And "setContentView()" is where it performs initial setup of components. 
