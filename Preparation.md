@@ -23,7 +23,8 @@ dependencies {
 ```
 
 
-This could also be a solution, but it doesn't work for me: 
+This could also be a solution, but it doesn't work in my case.
+
 *Go to File -> Project Structure. Following window will open: remove the junit library (select junit and press "-" button below ) and
 add it again (select "+" button below, select "library dep.", search for "junit", press OK ). Press OK to apply changes. After around 30 seconds your gradle sync should work fine.*
 (http://stackoverflow.com/questions/32519219/error23-17-failed-to-resolve-junitjunit4-12)
