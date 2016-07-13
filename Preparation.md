@@ -44,8 +44,11 @@ repositories {
 ##Problem 3 - Launch the emulator
 
 Well, there are a bunch of problems when I tried to launch my emulator.
-##### VM heap size is not enough
+##### 1. VM heap size is not enough
 Tools-Android-ADV Manager-Edit-Advance, scroll down and you will see the size option. I entered 512MB and everything is ok.
+
+##### 2. Could not get wglGetExtensionsStringARB
+Use Host GPU. Tools-Android-ADV Manager-Edit-Advance, change "auto" to "software".
 
 
 
