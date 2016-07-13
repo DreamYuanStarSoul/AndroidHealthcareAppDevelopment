@@ -46,32 +46,25 @@ public void sendMessage(View view) {
 ```
 
 #####Create an Intent
-Step 1: Create an intent with its departuere activity (left) and destination activity (right);
+Step 1: Create an intent with its source activity (left) and target activity (right)
 ```
 Intent intent = new Intent(this, DisplayMessageActivity.class);
 ```
-Step 2: Find the view and reach its content;
+Step 2: Find the view and reach its content
 ```
 EditText editText = (EditText) findViewById(R.id.edit_message);
 String message = editText.getText().toString();
 ```
-
-
-
-Setp 3: An Intent can carry data types as key-value pairs called extras (Key:EXTRA_MESSAGE, Value:message):
+Setp 3: Pass message to the Intent
+Create a unique, public constant EXTRA_MESSAGE as key, pair it with input message as value, and then assign the key-value pair to putExtra(). The intent will thsu carry the input message. When the system receives the call, it starts an instance of the Activity specified by the Intent
 ```
-public final static String EXTRA_MESSAGE = "com.mycompany.myfirstapp.MESSAGE";
-...
+public final static String EXTRA_MESSAGE = "com.mycompany.myfirstapp.MESSAGE"; // This could be anything, just a string
+
 intent.putExtra(EXTRA_MESSAGE, message);
 startActivity(intent);
 ```
-The system receives this call and starts an instance of the Activity specified by the Intent
-
-
-##Create a secondary activity
-
+Step 4: Create a secondary activity to display the message
 Each activity has "onCreate() method", where the activity receives and renders intent. And "setContentView()" is where it performs initial setup of components. 
-
 ```
 //In java - onCreate():
 Intent intent = getIntent();
@@ -82,4 +75,6 @@ textView.setText(message);
 RelativeLayout layout = (RelativeLayout) findViewById(R.id.content);
 layout.addView(textView);
 ```
-We extract the message and put it into a textView, which we put into the layout. 
+We extract the message from the intent and put it into a textView, which we put into the layout. 
+
+#Done :D
