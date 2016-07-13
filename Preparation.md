@@ -49,6 +49,6 @@ Tools-Android-ADV Manager-Edit-Advance, scroll down and you will see the size op
 
 ##### 2. Could not get wglGetExtensionsStringARB
 Use Host GPU. Tools-Android-ADV Manager-Edit-Advance, change "auto" to "software".
-
+(http://stackoverflow.com/questions/11407501/android-emulator-could-not-get-wglgetextensionsstringarb-error)
 There are some other minor issues, but they didn't prevent me from launching the VM, so, here we go.
 
