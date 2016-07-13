@@ -1,6 +1,6 @@
 #First - Simple UI
 
-Add a new text field:
+##Add a new text field
 ```
 <EditText android:id="@+id/edit_message"
     android:layout_width="wrap_content"
@@ -13,7 +13,7 @@ id indicates the reference/name of this element, need "+" when we create it. Hin
 "match_parent" occupies the entire interface
 
 
-Define strings in res/values/stings
+##Define strings in res/values/stings
 ```
 <resources>
     <string name="app_name">MainApp</string>
