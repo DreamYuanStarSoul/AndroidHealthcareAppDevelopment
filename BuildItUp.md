@@ -1,8 +1,7 @@
 #First - Simple UI
 
-##Add a new text field
+##Add a new text field in .xml
 ```
-//In xml:
 <EditText android:id="@+id/edit_message"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -14,9 +13,8 @@ id indicates the reference/name of this element, need "+" when we create it. Hin
 "match_parent" occupies the entire interface
 
 
-##Define strings in res/values/stings
+##Define strings in res/values/stings in .xml
 ```
-//In xml:
 <resources>
     <string name="app_name">MainApp</string>
     <string name="action_settings">Settings</string>
@@ -26,13 +24,18 @@ id indicates the reference/name of this element, need "+" when we create it. Hin
 ```
 Externalize all the string is definitely a brilliant idea! In case of localization, we only need this single file to do the translation. I should apply this tactic in other complicated programs, too.
 
-##Call method by clicking button
+##Send input message to a new interface by clicking a button
+#####Call method
+Method requirements:
 
+1. Be public;
+2. Have a void return value;
+3. Have a View as the only parameter (this will be the View that was clicked);
 ```
-//In xml:
+//In xml, invoke "sendMessage" method when button clicked:
 <Button android:onClick="sendMessage"/>
 
-//In java:
+//In java, create the method:
 public void sendMessage(View view) {
     Intent intent = new Intent(this, DisplayMessageActivity.class);  //Explain in the next section
     EditText editText = (EditText) findViewById(R.id.edit_message);
@@ -41,27 +44,21 @@ public void sendMessage(View view) {
     startActivity(intent);
 }
 ```
-Method requirements:
 
-1. Be public;
-2. Have a void return value;
-3. Have a View as the only parameter (this will be the View that was clicked);
-
-##Create an Intent
-
+#####Create an Intent
+Step 1: Create an intent with its departuere activity (left) and destination activity (right);
 ```
 Intent intent = new Intent(this, DisplayMessageActivity.class);
 ```
-1. A Context, Activity class is a subclass of Context;
-2. The *Class* of the activity which receives the Intent (which the Intent intends to send to).
-
-Find and reach a view:
+Step 2: Find the view and reach its content;
 ```
 EditText editText = (EditText) findViewById(R.id.edit_message);
 String message = editText.getText().toString();
 ```
 
-An Intent can carry data types as key-value pairs called extras (Key:EXTRA_MESSAGE, Value:message):
+
+
+Setp 3: An Intent can carry data types as key-value pairs called extras (Key:EXTRA_MESSAGE, Value:message):
 ```
 public final static String EXTRA_MESSAGE = "com.mycompany.myfirstapp.MESSAGE";
 ...
