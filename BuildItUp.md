@@ -31,13 +31,42 @@ Externalize all the string is definitely a brilliant idea! In case of localizati
 
 ...
 
-/** Called when the user clicks the Send button */
-    public void sendMessage(View view) {
-        // Do something in response to button
-    }
+public void sendMessage(View view) {
+    Intent intent = new Intent(this, DisplayMessageActivity.class);  //Explain in the next section
+    EditText editText = (EditText) findViewById(R.id.edit_message);
+    String message = editText.getText().toString();
+    intent.putExtra(EXTRA_MESSAGE, message);
+    startActivity(intent);
+}
 ```
 Method requirements:
 
 1. Be public;
 2. Have a void return value;
 3. Have a View as the only parameter (this will be the View that was clicked);
+
+##Create an Intent
+
+```
+Intent intent = new Intent(this, DisplayMessageActivity.class);
+```
+1. A Context, Activity class is a subclass of Context;
+2. The *Class* of the app component which receives the Intent.
+
+Find and reach a view:
+```
+EditText editText = (EditText) findViewById(R.id.edit_message);
+String message = editText.getText().toString();
+```
+
+An Intent can carry data types as key-value pairs called extras (Key:EXTRA_MESSAGE, Value:message):
+```
+public final static String EXTRA_MESSAGE = "com.mycompany.myfirstapp.MESSAGE";
+...
+intent.putExtra(EXTRA_MESSAGE, message);
+startActivity(intent);
+```
+The system receives this call and starts an instance of the Activity specified by the Intent
+
+
+##Create a secondary activity
