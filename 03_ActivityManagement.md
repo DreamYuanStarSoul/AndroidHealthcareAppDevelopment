@@ -57,7 +57,7 @@ protected void onStop() {
             );
 }
 ```
-##onStart()
+##onStart() / onRestart()
 onCreate() and onStart() are ephemeral, the activity will stay in onResume() (running) status afterwars.
 
 ```
