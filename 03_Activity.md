@@ -1,3 +1,4 @@
+#Activity
 ##Launcher Activity
 Add these to one of the activity and make it the launcher activity.
 ```
@@ -101,3 +102,22 @@ public void onDestroy() {
     android.os.Debug.stopMethodTracing();
 }
 ```
+##Recreating an activity
+
+If activity was destroyed due to "back" function or suicide "finish()", it's gone permanently. However, if it has been destroyed by system due to not enough resources, its state will be preserved by system through "onSaveInstanceState()". The states includes all the views which have an unique ID. Override the method to preserve additional information.
+```
+static final String STATE_SCORE = "playerScore";
+static final String STATE_LEVEL = "playerLevel";
+...
+
+@Override
+public void onSaveInstanceState(Bundle savedInstanceState) {
+    // Save the user's current game state
+    savedInstanceState.putInt(STATE_SCORE, mCurrentScore);
+    savedInstanceState.putInt(STATE_LEVEL, mCurrentLevel);
+    
+    // Always call the superclass so it can save the view hierarchy state
+    super.onSaveInstanceState(savedInstanceState);
+}
+```
+
