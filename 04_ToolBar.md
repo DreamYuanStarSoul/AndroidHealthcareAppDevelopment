@@ -14,4 +14,15 @@ Replace ActionBar with ToolBar, as ActionBar may cause inconsistency in differen
 
 1. Add the v7 appcompat support library
 2. Make sure the activity extends AppCompatActivity
-3. 
+
+##3. Add ToolBar
+```
+<android.support.v7.widget.Toolbar
+   android:id="@+id/my_toolbar"
+   android:layout_width="match_parent"
+   android:layout_height="?attr/actionBarSize"
+   android:background="?attr/colorPrimary"
+   android:elevation="4dp"
+   android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+   app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+   ```
