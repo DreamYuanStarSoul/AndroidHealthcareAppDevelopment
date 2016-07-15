@@ -1,32 +1,29 @@
-#Simple UI - Click a Button
+#Simple UI manipulation
 
-##Add a new text field in .xml
+##Create a view
 ```
-<EditText android:id="@+id/edit_message"
+//Add a new text field in .xml
+<EditText android:id="@+id/button"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:hint="@string/edit_message" /> //Error, as it is not yet defined
-```
-id indicates the reference/name of this element, need "+" when we create it. Hint is the default message that will actually be displayed.
-
-"warp_content" means the element will only occupy the space that it needs
-"match_parent" occupies the entire interface
-
-
-##Define strings in res/values/stings in .xml
-```
+    android:hint="@string/button" /> 
+    
+//Define strings in res/values/stings in .xml
 <resources>
-    <string name="app_name">MainApp</string>
-    <string name="action_settings">Settings</string>
-    <string name="edit_message">Enter a Message</string>
     <string name="button_send">Send</string>
 </resources>
 ```
+id indicates the reference/name of this element, hint is the default message that will actually be displayed.
+
+"warp_content": only occupy the space needed
+"match_parent": extends to the entire page
+
 Externalize all the string is definitely a brilliant idea! In case of localization, we only need this single file to do the translation. I should apply this tactic in other complicated programs, too.
 
-##Send input message to a new interface by clicking a button
-#####Call method
-Method requirements:
+
+##Send the message to another activity when button clicked
+
+We create a Java method to do this, the requirements are:
 
 1. Be public;
 2. Have a void return value;
@@ -35,7 +32,7 @@ Method requirements:
 //In xml, invoke "sendMessage" method when button clicked:
 <Button android:onClick="sendMessage"/>
 
-//In java, create the method:
+//In Java, create the method:
 public void sendMessage(View view) {
     Intent intent = new Intent(this, DisplayMessageActivity.class);  //Explain in the next section
     EditText editText = (EditText) findViewById(R.id.edit_message);
@@ -45,7 +42,7 @@ public void sendMessage(View view) {
 }
 ```
 
-#####Create an Intent
+#####Explanantion
 Step 1: Create an intent with its source activity (left) and target activity (right)
 ```
 Intent intent = new Intent(this, DisplayMessageActivity.class);
@@ -67,7 +64,7 @@ Step 4: Create a secondary activity to display the message
 Each activity has "onCreate() method", where the activity receives and renders intent. And "setContentView()" is where it performs initial setup of components. 
 ```
 //In java - onCreate():
-Intent intent = getIntent();
+Intent intent = getIntent(); // Obtain the incoming intent
 String message = intent.getStringExtra(MyActivity.EXTRA_MESSAGE);
 TextView textView = new TextView(this);
 textView.setTextSize(40);
@@ -76,5 +73,15 @@ RelativeLayout layout = (RelativeLayout) findViewById(R.id.content);
 layout.addView(textView);
 ```
 We extract the message from the intent and put it into a textView, which we put into the layout. 
+
+##Simply jump to another activity?
+
+This one we will also use a lot:
+```
+if (success) { 
+    finish(); // End current activity
+    Intent intent = new Intent(LoginActivity.this, MyActivity.class); // Create an intent
+    startActivity(intent); // Launch it
+```
 
 #Done :D
