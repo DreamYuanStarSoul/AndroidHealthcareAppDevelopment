@@ -1,6 +1,6 @@
-##Remove the default action bar
+##Remove the default ActionBar
 
-Remove the default ActionBar, which may cause inconsistency in different versions, by changing style
+Replace ActionBar with ToolBar, as ActionBar may cause inconsistency in different versions, by changing style
 ```
  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
  
