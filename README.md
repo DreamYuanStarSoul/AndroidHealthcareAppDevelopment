@@ -1,11 +1,22 @@
 # AndroidAppTrial
-Share some shallow experience
+Share some problems that I have encountered, hopefully you will find what you're looking for here.
 
 
+Question:
+Shouldn't "final Boolean success" be false as default? Why success is true...
+```
+        protected void onPostExecute(final Boolean success) {
+            mAuthTask = null;
+            showProgress(false);
 
-##### Github Desktop Walkthrough with Andriod Studio
+            if (success) { // Finish login and start homepage
+                finish();
+                Intent intent = new Intent(LoginActivity.this, MyActivity.class);
+                startActivity(intent);
 
-1. Install Github desktop
-2. Create a branch (left up corner), which is your private space to work on, separating from others.
-2. Make changes, note down summary and description, and commit to your branch.
-3. To merge your changes to the master branch, create and send a *pull request* (right up corner).
+            } else {
+                mPasswordView.setError(getString(R.string.error_incorrect_password));
+                mPasswordView.requestFocus();
+            }
+        }
+```
