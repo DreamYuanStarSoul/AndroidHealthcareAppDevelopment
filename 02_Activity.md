@@ -1,4 +1,8 @@
 #Activity
+
+Simply speaking, an activiy is one page. It is a basic framework that displays certain contents. When we play with an application, each different interface we see is an activity. Create an activity using File-New-Activity, pick one you like or start from sketch with empty ones.
+
+
 ##Launcher Activity
 Add these to one of the activity and make it the launcher activity.
 ```
@@ -90,7 +94,7 @@ protected void onRestart() {
 ##onDestroy()
 Usually not needed, as activity will perform cleanup during onPause() and onStop(). But for long-running resources and threads, we destroty the activity. 
 
-#####finish() - transfer page
+#####finish() - invoke it before leaving this page
 The system calls onDestroy() after it has already called onPause() and onStop() in all situations except one: when you call finish() from within the onCreate() method. In some cases, such as when your activity operates as a temporary decision maker to launch another activity, you might call finish() from within onCreate() to destroy the activity. In this case, the system immediately calls onDestroy() without calling any of the other lifecycle methods.
 
 ```
