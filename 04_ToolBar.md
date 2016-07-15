@@ -37,3 +37,7 @@ protected void onCreate(Bundle savedInstanceState) {
     setSupportActionBar(myToolbar);
     }
 ```
+
+4. To manipulate
+
+To use the ActionBar utility methods, call the activity's getSupportActionBar() method. This method returns a reference to an appcompat ActionBar object. Once you have that reference, you can call any of the ActionBar methods to adjust the app bar. For example, to hide the app bar, call ActionBar.hide().
