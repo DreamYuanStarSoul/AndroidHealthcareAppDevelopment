@@ -1,5 +1,5 @@
-##Caution!
-Be very aware about the consistency of packages. Fragment and Fragment are included in both android.app package and android.support package. Make sure that you use the same package for these two classes, otherwise you will get an error, for instance, in the following code.
+#Caution!
+Be very aware about the consistency of packages. For example, Fragment and FragmentManager are included in both android.app package and android.support package. You wanna make sure that you are using the same package for these two classes, otherwise you will get an error for you don't know why, such as in the following code.
 ```
 transaction.add(R.id.id_content, fragmentStepCount);
 transaction.show(fragmentStepCount);
