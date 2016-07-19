@@ -19,5 +19,6 @@ execute() include four stages of methods, onPreExecute(),doInBackground(Params..
 3. Choose the image path
 4. Give your image a name in Resource name
 5. Next->Finish
+
 The image will be saved in the /res/drawable folder!
 (http://stackoverflow.com/questions/29047902/how-to-add-an-image-to-the-drawable-folder-in-android-studio)
