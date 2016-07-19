@@ -106,6 +106,9 @@ public class GeneralActivity extends AppCompatActivity  {
 ```
 
 (https://guides.codepath.com/android/Creating-and-Using-Fragments)
+
 (http://stackoverflow.com/questions/15109017/difference-between-android-app-fragment-and-android-support-v4-app-fragment)
+
 (http://blog.csdn.net/lmj623565791/article/details/24740977)
+
 (http://blog.csdn.net/lmj623565791/article/details/37970961)
