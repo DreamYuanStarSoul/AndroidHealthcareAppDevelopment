@@ -22,3 +22,6 @@ execute() include four stages of methods, onPreExecute(),doInBackground(Params..
 
 The image will be saved in the /res/drawable folder!
 (http://stackoverflow.com/questions/29047902/how-to-add-an-image-to-the-drawable-folder-in-android-studio)
+
+##Depreciated usage and update:
+fill_parent --> march_parent
