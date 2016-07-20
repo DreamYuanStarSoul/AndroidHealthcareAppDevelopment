@@ -29,10 +29,10 @@ We create a Java method to do this, the requirements are:
 2. Have a void return value;
 3. Have a View as the only parameter (this will be the View that was clicked);
 ```
-//In xml, invoke "sendMessage" method when button clicked:
+//In main activity xml, invoke "sendMessage" method when button clicked:
 <Button android:onClick="sendMessage"/>
 
-//In Java, create the method:
+//In its Java, create the method:
 public void sendMessage(View view) {
     Intent intent = new Intent(this, DisplayMessageActivity.class);  //Explain in the next section
     EditText editText = (EditText) findViewById(R.id.edit_message);
@@ -60,19 +60,25 @@ public final static String EXTRA_MESSAGE = "com.mycompany.myfirstapp.MESSAGE"; /
 intent.putExtra(EXTRA_MESSAGE, message);
 startActivity(intent);
 ```
-Step 4: Create a secondary activity to display the message
+Step 4: Create a secondary activity (activity_display_message) to display the message
 Each activity has "onCreate() method", where the activity receives and renders intent. And "setContentView()" is where it performs initial setup of components. 
 ```
-//In java - onCreate():
-Intent intent = getIntent(); // Obtain the incoming intent
-String message = intent.getStringExtra(MyActivity.EXTRA_MESSAGE);
-TextView textView = new TextView(this);
-textView.setTextSize(40);
-textView.setText(message);
-RelativeLayout layout = (RelativeLayout) findViewById(R.id.content);
-layout.addView(textView);
+ @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_display_message);
+
+        // Get the intent of this activity and extract the message from it
+        Intent intent = getIntent();
+        String message = intent.getStringExtra(HomeActivity.EXTRA_MESSAGE);
+        TextView textView = new TextView(this);
+        textView.setTextSize(40);
+        textView.setText(message);
+        RelativeLayout layout = (RelativeLayout) findViewById(R.id.content);
+        layout.addView(textView);
+    }
 ```
-We extract the message from the intent and put it into a textView, which we put into the layout. 
+Now, we can extract the message from the intent and put it into a textView, which we put into the layout. 
 
 ##Simply jump to another activity?
 
