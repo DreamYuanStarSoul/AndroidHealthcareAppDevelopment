@@ -14,11 +14,11 @@ execute() include four stages of methods, onPreExecute(),doInBackground(Params..
 
 ##Insert image to drawable
 
-1. Right click on res, new Image Asset;
-2. On Asset type choose Action Bar and Tab Icons;
-3. Choose the image path;
-4. Give your image a name in Resource name;
-5. Next->Finish.
+1. Right click on res, new Image Asset
+2. On Asset type choose Action Bar and Tab Icons
+3. Choose the image path
+4. Give your image a name in Resource name
+5. Next->Finish
 
 The image will be saved in the /res/drawable folder!
 (http://stackoverflow.com/questions/29047902/how-to-add-an-image-to-the-drawable-folder-in-android-studio)
@@ -28,5 +28,6 @@ fill_parent --> march_parent
 
 ##GridLayout
 
-1. GridLayout is in use only after Android 4.0, API Level = 14. Make sure that we don't make compatible mistake;
-2. Column and row start from 0 and end at n-1;
+1. GridLayout is in use only after Android 4.0, API Level = 14. Lower versions will need additional support packages
+2. Column and row start from 0 and end at n-1
+3. Use "android:layout_width="0dp" to make elements have no-zero heights
