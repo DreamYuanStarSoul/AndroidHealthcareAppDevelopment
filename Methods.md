@@ -31,3 +31,4 @@ fill_parent --> march_parent
 1. GridLayout is in use only after Android 4.0, API Level = 14. Lower versions will need additional support packages
 2. Column and row start from 0 and end at n-1
 3. Use "android:layout_width="0dp" to make elements have no-zero heights
+4. Excessive length of string may cause unevenness in alignment
