@@ -87,3 +87,9 @@ My evenly distributed example with span and weight
 
 </GridLayout>
 ```
+
+##Insert special characters in string.xml
+&#160    space 
+\n       new line
+\t       tab
+
