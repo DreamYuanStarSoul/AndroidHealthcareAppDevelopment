@@ -1,6 +1,30 @@
 ##Print log?
 Use println() instead of print()
 
+#Best approach for clicking buttons
+
+Create an individual listener for each button
+```
+private ImageButton buttonHeartbeat;
+private ImageButton buttonStepCount;
+
+buttonHeartbeat = (ImageButton) findViewById(R.id.general_button_heartbeat);
+buttonStepCount = (ImageButton) findViewById(R.id.general_button_step_count);
+
+buttonHeartbeat.setOnClickListener(this);
+buttonStepCount.setOnClickListener(this);
+
+public void onClick(View v) {
+    if (v.getId() == R.id.general_button_step_count) {
+        selectTab(0);
+    }
+    else if (v.getId() == R.id.general_button_heartbeat) {
+        selectTab(1);
+    }
+}
+```
+
+
 ##UserLoginTask
 ```
 public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {}
