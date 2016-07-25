@@ -8,6 +8,12 @@
 Replace ActionBar with Toolbar, as ActionBar may cause inconsistency in different versions, by changing style (there are two style files!)
 ```
  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+ 
+     // Here we can change the color design of the toolbar
+     <item name="colorPrimary">@color/primary</item>              
+     <item name="colorPrimaryDark">@color/primaryDarkBlue</item>
+     <item name="colorAccent">@color/fontColor</item>
+ </style>
 ```
 
 In menifest, add:
