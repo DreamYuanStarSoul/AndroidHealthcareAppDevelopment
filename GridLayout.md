@@ -59,3 +59,8 @@ My evenly distributed example with span and weight
 
 </GridLayout>
 ```
+Add this line to leave a moderate margin between all modules.
+```
+android:useDefaultMargins="true"
+```
+
