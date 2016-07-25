@@ -8,31 +8,32 @@
 Replace ActionBar with Toolbar, as ActionBar may cause inconsistency in different versions, by changing style (there are two style files!)
 ```
  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
- 
- //Alternatives that didn't work in my case:
- //Add
- <item name="android:windowActionBar">false</item>
- 
 ```
 
-##3. Add Toolbar
-In xml
+In menifest, add:
 ```
+<application android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+```
+
+##3. Add Toolbar as an individual xml
+```
+<?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.Toolbar
-   android:id="@+id/my_toolbar"
-   android:layout_width="match_parent"
-   android:layout_height="?attr/actionBarSize"
-   android:background="?attr/colorPrimary"
-   android:elevation="4dp"
-   android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-   app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/general_tool_bar_height"
+    android:elevation="@dimen/toolbar_elevation"
+    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"/>
    ```
-In Java
+In Java onCreate():
 ```
 @Override
 protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_my);
+    
+    //Add these two lines
     Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
     setSupportActionBar(myToolbar);
     }
