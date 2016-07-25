@@ -1,4 +1,9 @@
-##1. Remove the default ActionBar
+##1. Prerequisites
+
+1. Add the v7 appcompat support library
+2. Make sure ALL activities using toolbar extends AppCompatActivity
+
+##2. Remove the default ActionBar
 
 Replace ActionBar with Toolbar, as ActionBar may cause inconsistency in different versions, by changing style (there are two style files!)
 ```
@@ -9,11 +14,6 @@ Replace ActionBar with Toolbar, as ActionBar may cause inconsistency in differen
  <item name="android:windowActionBar">false</item>
  
 ```
-
-##2. Prerequisites
-
-1. Add the v7 appcompat support library
-2. Make sure the activity extends AppCompatActivity
 
 ##3. Add Toolbar
 In xml
