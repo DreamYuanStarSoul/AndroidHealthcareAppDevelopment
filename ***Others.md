@@ -56,7 +56,9 @@ fill_parent --> march_parent
 
 
 ##Insert special characters in string.xml
-&#160    space 
-\n       new line
-\t       tab
+\u0020    space
+
+\n        new line
+
+\t        tab
 
