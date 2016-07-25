@@ -65,31 +65,25 @@ public class GeneralActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_step_count);
 
         layoutStepCount = (LinearLayout) findViewById(R.id.fragment_step_count);
-        //layoutStepCount.setOnClickListener(this);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
     }
 
     private void setTabSelection(int index) {
+        // Manager and Transaction are needed
         FragmentManager fm = getFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
-        if (index == 0) {
-            ((ImageButton) layoutStepCount.findViewById(R.id.imageButton))
-                    .setImageResource(R.drawable.step_count);
-            if (fragmentStepCount == null) {
-                fragmentStepCount = new FragmentStepCount();
-                transaction.add(R.id.id_content, fragmentStepCount);
-            }
-            else {
-                transaction.show(fragmentStepCount);
-            }
+       
+        if (fragmentStepCount == null) {
+            fragmentStepCount = new FragmentStepCount();
+            transaction.add(R.id.id_content, fragmentStepCount);
         }
+        else {
+            transaction.show(fragmentStepCount); // Hidden before
+        }
+        
         transaction.commit();
     }
 }
