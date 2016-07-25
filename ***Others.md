@@ -62,3 +62,6 @@ fill_parent --> march_parent
 
 \t        tab
 
+
+##TextView
+To clear: view.setText("");
