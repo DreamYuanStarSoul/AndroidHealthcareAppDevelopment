@@ -39,9 +39,12 @@ protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_my);
     
-    //Add these two lines
+    // Add these two lines
     Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
     setSupportActionBar(myToolbar);
+    
+    // Set true for "back" button
+    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 ```
 
