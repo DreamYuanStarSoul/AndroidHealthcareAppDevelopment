@@ -79,7 +79,6 @@ public class GeneralActivity extends AppCompatActivity  {
     private void setTabSelection(int index) {
         FragmentManager fm = getFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
-        hideFragments(transaction);
         if (index == 0) {
             ((ImageButton) layoutStepCount.findViewById(R.id.imageButton))
                     .setImageResource(R.drawable.step_count);
@@ -93,15 +92,6 @@ public class GeneralActivity extends AppCompatActivity  {
         }
         transaction.commit();
     }
-
-
-    private void hideFragments(FragmentTransaction transaction)
-    {
-        if (fragmentStepCount != null) {
-            transaction.hide(fragmentStepCount);
-        }
-    }
-
 }
 ```
 
