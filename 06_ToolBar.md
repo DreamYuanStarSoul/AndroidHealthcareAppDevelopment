@@ -3,9 +3,11 @@
 1. Add the v7 appcompat support library
 2. Make sure ALL activities using toolbar extends AppCompatActivity
 
-##2. Remove the default ActionBar
+##2. Choose a new style without the ActionBar
 
-Replace ActionBar with Toolbar, as ActionBar may cause inconsistency in different versions, by changing style (there are two style files!)
+By using "NoActionBar" style, you removed ActionBar, which may cause inconsistency in different versions. 
+
+Notice, there may have multiple style file, you need to change them all
 ```
  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
  
@@ -16,9 +18,9 @@ Replace ActionBar with Toolbar, as ActionBar may cause inconsistency in differen
  </style>
 ```
 
-In menifest, add:
+In menifest, add a reference to the style
 ```
-<application android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+<application android:theme="@style/AppTheme"/>
 ```
 
 ##3. Add Toolbar as an individual xml
