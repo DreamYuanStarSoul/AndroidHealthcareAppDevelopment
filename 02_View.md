@@ -11,3 +11,11 @@ TextView prediction = (TextView) findViewById(R.id.prediction_text);
 TextView prediction = (TextView) getActivity().findViewById(R.id.prediction_text);
 ```
 
+To intialize an image button, we could:
+```
+private ImageButton buttonPrediction;
+buttonPrediction = (ImageButton) findViewById(R.id.procare_button_prediction);
+buttonPrediction.setOnClickListener(this);
+((ImageButton) buttonPrediction).setImageResource(R.drawable.monitor);
+buttonPrediction.setScaleType(ImageView.ScaleType.FIT_CENTER);
+```
