@@ -1,0 +1,1 @@
+We can generally assume that each view is a unit on our interface, such as a button, a text window. I personally suggest we initialize and modify views through Java code, especially those views that will constantly change in response to user behaviors.
