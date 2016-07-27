@@ -63,6 +63,18 @@ fill_parent --> march_parent
 \t        tab
 
 
+##EditText
+
+Use 
+```
+android:maxLines="1"
+```
+instead of 
+```
+singleLine="true"
+```
+which has been depreciated
+
 ##TextView
 To clear: view.setText("");
 
