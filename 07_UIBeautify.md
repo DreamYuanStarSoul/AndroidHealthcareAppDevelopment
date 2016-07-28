@@ -1,4 +1,4 @@
-## Gradient background
+## Gradient background / Change button shape
 We can change the color, shape, cornor angles, and border for button, textview, and more. Create a drawable file contains:
 ```
 <?xml version="1.0" encoding="utf-8"?>
