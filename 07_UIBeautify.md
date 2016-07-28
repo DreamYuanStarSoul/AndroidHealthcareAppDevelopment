@@ -13,3 +13,37 @@ Go back to xml, change the background to drawable:
 ```
 android:background="@drawable/background_clock"
 ```
+
+
+## Basic image button
+```
+buttonSleep = (ImageButton) findViewById(R.id.general_button_sleep);
+buttonSleep.setOnClickListener(this);
+
+((ImageButton) buttonSleep).setImageResource(R.drawable.sleep);   // Add a symbol
+buttonSleep.setScaleType(ImageView.ScaleType.FIT_CENTER);
+buttonStepCount.setBackgroundColor(normal);  // Change the background
+```
+
+## On click effect
+
+Change and restore button UI when clicked.
+
+Color:
+```
+if (chosen)
+    button.setBackgroundColor(clicked);
+
+private void restoreColor() {
+for (ImageButton ib : buttonList) 
+    ib.setBackgroundColor(normal);
+}
+```
+Drawable:
+```
+Drawable mDrawable = getResources().getDrawable(R.drawable.background);
+textView.setBackground(mDrawable);
+```
+
+## Large Image
+Simply copy and paste them into drawable folder, then invoke them.
