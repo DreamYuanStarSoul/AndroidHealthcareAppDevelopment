@@ -47,3 +47,15 @@ textView.setBackground(mDrawable);
 
 ## Large Image
 Simply copy and paste them into drawable folder, then invoke them.
+
+
+## Transparent color
+
+Adjust the bar behind the color panel to change opacity, 00 == transparent, all colors applied!
+```
+    <color name="transparent_30">#70ffffff</color>
+    <color name="transparent_85">#15ffffff</color>
+    <color name="transparent_100">#00ffffff</color>
+    <color name="transparent_sand">#56fafac5</color>
+    <color name="transparent_primaryLight">#3a5acbda</color>
+```
