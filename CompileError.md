@@ -6,8 +6,7 @@
 File -> Project Structure -> Module -> Choose the right version of SDK and build tool
 
 
-##
-Change the grid files, examples:
+##Change the grid files, examples:
 APP:
 ```
 android {
