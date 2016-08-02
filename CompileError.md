@@ -85,6 +85,5 @@ dependencies {
 Click File -> Invalidate Caches /Restart
 
 ##Error:Module is not backed by gradle
-Run -> Edit Configuration -> Android -> app -> click apply
-Rebuild, rebuild, rebuild.
+Change configurations, clean project, at this time, a new folder will be created under the same reposatory. Close the project, and open instead the newly created gradle job. 
 
