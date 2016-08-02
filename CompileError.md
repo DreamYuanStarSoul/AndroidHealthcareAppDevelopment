@@ -86,4 +86,5 @@ Click File -> Invalidate Caches /Restart
 
 ##Error:Module is not backed by gradle
 Run -> Edit Configuration -> Android -> app -> click apply
+Rebuild, rebuild, rebuild.
 
