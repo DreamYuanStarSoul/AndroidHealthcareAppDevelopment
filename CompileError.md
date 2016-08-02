@@ -66,7 +66,7 @@ task clean(type: Delete) {
 ```
 
 ##Gradle version xxxx is required
-1. In File-Setting-gradle, change the project-leveling settiong to auto
+1. In File-> Setting-> gradle, change the project-leveling settiong to auto
 2. In project_root/gradle/wrapper/gradle-wrapper.properties, change the gradle version to the wanted one
 ```
 distributionUrl=https\://services.gradle.org/distributions/gradle-2.10-all.zip
@@ -80,3 +80,6 @@ dependencies {
         // in the individual module build.gradle files
     }
 ```
+
+##Error:Cannot locate factory for objects of type DefaultGradleConnector
+Click File -> Invalidate Caches /Restart
