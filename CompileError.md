@@ -68,3 +68,19 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 ```
+
+##Gradle version xxxx is required
+1. In File-Setting-gradle, change the project-leveling settiong to auto
+2. In project_root/gradle/wrapper/gradle-wrapper.properties, change the gradle version to the wanted one
+```
+distributionUrl=https\://services.gradle.org/distributions/gradle-2.10-all.zip
+```
+3. Also, change the gradle dependency version in project's build.gradle file
+```
+dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+```
