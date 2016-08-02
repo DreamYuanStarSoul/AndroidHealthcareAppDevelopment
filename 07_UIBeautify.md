@@ -76,3 +76,18 @@ or make your own divider
     <solid android:color="#ffffff" />
 </shape>
 ```
+
+
+## Upside elevation workaround
+
+Apply this to a view :)
+```
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:type="linear"
+        android:angle="90"
+        android:startColor="@color/base"
+        android:endColor="@color/transparent_100"></gradient>
+</shape>
+```
