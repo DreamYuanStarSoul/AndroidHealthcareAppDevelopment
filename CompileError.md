@@ -83,3 +83,7 @@ dependencies {
 
 ##Error:Cannot locate factory for objects of type DefaultGradleConnector
 Click File -> Invalidate Caches /Restart
+
+##Error:Module is not backed by gradle
+Run -> Edit Configuration -> Android -> app -> click apply
+
