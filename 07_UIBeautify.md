@@ -59,3 +59,20 @@ Adjust the bar behind the color panel to change opacity, 00 == transparent, all 
     <color name="transparent_sand">#56fafac5</color>
     <color name="transparent_primaryLight">#3a5acbda</color>
 ```
+
+## Divider within LinearLayout
+Add
+```
+android:divider="?android:attr/dividerHorizontal" 
+//or 
+android:divider="?android:attr/dividerVertical"
+```
+
+or make your own divider
+```
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:width="1dip" />
+    <solid android:color="#ffffff" />
+</shape>
+```
