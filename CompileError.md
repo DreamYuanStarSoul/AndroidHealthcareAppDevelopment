@@ -7,7 +7,7 @@ File -> Project Structure -> Module -> Choose the right version of SDK and build
 
 
 ##Change the grid files, examples:
-APP:
+In build.gradle of the app:
 ```
 android {
     compileSdkVersion 23
@@ -26,13 +26,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-    repositories {
-        mavenCentral()
-        jcenter {
-            url "http://jcenter.bintray.com/"
-        }
-    }
 }
 
 dependencies {
@@ -45,7 +38,7 @@ dependencies {
 }
 ```
 
-Project:
+In build.gradle of the project:
 ```
 buildscript {
     repositories {
@@ -58,9 +51,12 @@ buildscript {
     }
 }
 
-allprojects {
+allprojects {  // Either have these lines for all projects, or put them in each project build.gradle
     repositories {
-        jcenter()
+        mavenCentral()
+        jcenter {
+            url "http://jcenter.bintray.com/"
+        }
     }
 }
 
