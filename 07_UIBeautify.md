@@ -78,6 +78,10 @@ or make your own divider
 ```
 
 
+## Divider within GridLayout
+No such option yet. Workaround: Set the background color as divider color, and create margins between all elements.
+
+
 ## Upside elevation workaround
 
 Apply this to a view :)
@@ -91,3 +95,4 @@ Apply this to a view :)
         android:endColor="@color/transparent_100"></gradient>
 </shape>
 ```
+
