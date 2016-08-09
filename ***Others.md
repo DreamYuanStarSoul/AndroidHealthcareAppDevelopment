@@ -78,13 +78,3 @@ which has been depreciated
 ##TextView
 To clear: view.setText("");
 
-##Change drawable color
-```
-Drawable mDrawable = getDrawable(R.drawable.step_count);
-mDrawable.setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
-```
-
-##Make the background of ImageButton transparent to show the image
-```
-android:background="@null"
-```
