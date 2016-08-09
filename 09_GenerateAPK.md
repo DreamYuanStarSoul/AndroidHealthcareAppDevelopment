@@ -21,3 +21,13 @@ android {
     }
 }
 ```
+
+
+#####build.gradle uncaught translation error ExecutionException OutOfMemory
+
+Add this line to app build
+```
+dexOptions {
+    javaMaxHeapSize "4g"
+}
+```
