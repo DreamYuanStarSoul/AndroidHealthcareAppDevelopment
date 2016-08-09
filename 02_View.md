@@ -23,7 +23,7 @@ buttonPrediction.setScaleType(ImageView.ScaleType.FIT_CENTER);
 ```
 
 
-#GridLayout
+##GridLayout
 
 1. GridLayout is in use only after Android 4.0, API Level = 14. Lower versions will need additional support packages
 2. Column and row start from 0 and end at n-1
