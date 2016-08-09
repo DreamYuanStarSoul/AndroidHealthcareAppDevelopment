@@ -1,4 +1,11 @@
 
+##Name your app and give it an icon in Manifest
+
+```
+ <application android:theme="@style/AppTheme"
+        android:label="@string/app_name"
+        android:icon="@drawable/icon">
+```
 
 ##Simply build your .apk under build -> build apk
 
