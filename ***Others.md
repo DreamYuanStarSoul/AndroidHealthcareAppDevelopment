@@ -1,9 +1,9 @@
-##Put activities into Menifest after you implement them!
+##Put activities into Menifest as you create them!
 
 ##Print log?
 Use println() instead of print()
 
-#Best approach for clicking buttons
+##Best approach for clicking buttons
 
 Create an individual listener for each button
 ```
