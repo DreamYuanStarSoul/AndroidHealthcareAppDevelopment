@@ -110,3 +110,14 @@ This change only the user input font, not the hint font.
 
 
 (http://stackoverflow.com/questions/27588965/how-to-use-custom-font-in-android-studio)
+
+##Change drawable color
+```
+Drawable mDrawable = getDrawable(R.drawable.step_count);
+mDrawable.setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
+```
+
+##Make the background of ImageButton transparent to show the image
+```
+android:background="@null"
+```
