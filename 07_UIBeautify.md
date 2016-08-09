@@ -96,6 +96,8 @@ Apply this to a view :)
 </shape>
 ```
 
+##Custom Font
+
 Go to directory app>src>main, create a folder named "assets", inside which create another folder "fonts". Put your font file here, and implement the following code in your program: 
 
 ```
