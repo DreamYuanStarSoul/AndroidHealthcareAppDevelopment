@@ -14,6 +14,13 @@ you will find the generated .apk file under
 MyApplication\app\build\outputs\apk
 ```
 
+##Time is money
+
+In Android Studio go to File -> Settings -> Build, Execution, Deployment -> Build Tools -> Gradle
+Check the 'Offline work' under 'Global Gradle settings'
+It will dramatically reduce the time used to build apk.
+
+
 
 ##Bugs
 
