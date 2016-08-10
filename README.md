@@ -1,2 +1,2 @@
 # AndroidAppTrial
-Share some problems that I have encountered, hopefully you will find what you're looking for here.
+Share problems that I have encountered trying Android development, hopefully you will find what you're looking for here.
