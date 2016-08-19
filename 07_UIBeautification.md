@@ -1,3 +1,6 @@
+##Google style guide  
+https://material.google.com/style/color.html#color-text-background-colors
+
 ## Gradient background / Change button shape
 We can change the color, shape, cornor angles, and border for button, textview, and more. Create a drawable file contains:
 ```
