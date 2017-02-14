@@ -53,3 +53,10 @@ Use Host GPU. Tools-Android-ADV Manager-Edit-Advance, change "auto" to "software
 
 There are some other minor issues, but they didn't prevent me from launching the VM, so, here we go.
 
+## Problem 4 - Upgrade SDK version
+Adjust:  
+1. compileSdkVersion: The way to tell Gradle what version of the Android SDK to compile your app with. A new Android SDK is required to use any of the new APIs added in that level. Changing it does not change runtime behavior. Therefore it is strongly recommended that you always compile with the latest SDK;  
+2. minSdkVersion: The lower bound for your app. The minSdkVersion is one of the signals used to determine which of a user’s devices an app can be installed on. When deciding on a minSdkVersion, you should consider the stats on the [Dashboards](https://developer.android.com/about/dashboards/index.html);  
+3. targetSdkVersion: The main way Android provides forward compatibility by not applying behavior changes unless the targetSdkVersion is updated. Please test before updating your targetSdkVersion;  
+
+Link: https://medium.com/google-developers/picking-your-compilesdkversion-minsdkversion-targetsdkversion-a098a0341ebd#.tz5zzucma
